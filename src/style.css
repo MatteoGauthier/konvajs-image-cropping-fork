@@ -1,0 +1,23 @@
+html,body,#container{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+button{
+  position: absolute;
+  top: 10px;
+  width: 120px;
+  box-sizing: border-box;
+  line-height:30px;
+  z-index: 1
+}
+#cropPhotoEnd{
+  left:10px;
+}
+#cropPhotoStart{
+  left:140px;
+}
+#cropPhotoReset{
+  left:270px;
+}

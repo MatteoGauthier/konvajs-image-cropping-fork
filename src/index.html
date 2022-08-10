@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button id="cropPhotoEnd" onclick="target && target.cropEnd()">cropPhotoEnd</button>
+    <button id="cropPhotoStart" onclick="target && target.cropStart()">cropPhotoStart</button>
+    <button id="cropPhotoReset" onclick="target && target.cropReset()">cropPhotoReset</button>
+    <div id="container"></div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/konva/4.0.13/konva.min.js'></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

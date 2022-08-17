@@ -1,10 +1,10 @@
 {
   "name": "konvajs-image-cropping",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
     "parcel": "^2.7.0"

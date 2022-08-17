@@ -176,6 +176,7 @@
       borderDash: [5, 5],
       anchorSize: 21,
       anchorCornerRadius: 11,
+      name: "crop-transformer",
     }).attachTo(this.cropImage)
 
     this.transformer = new Konva.Transformer().attachTo(this)
@@ -257,7 +258,7 @@ var stage = new Konva.Stage({
   height: Math.max(window.innerHeight, 800),
 })
 var src =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/P._Legendre_%281.5_Mo%29%2A.png/800px-P._Legendre_%281.5_Mo%29%2A.png"
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/1024px-Tour_Eiffel_Wikimedia_Commons.jpg"
 var transformer
 var layer = new Konva.Layer()
 var target
@@ -269,15 +270,15 @@ Konva.Image.fromURL(src, function (konvaImage) {
     strokeWidth: 1,
     y: 100,
     x: 118,
-    width: 200,
-    height: 125,
+    width: 1024,
+    height: 1825,
     draggable: true,
     cropTransform: {
-      height: 175,
-      rotation: 10,
-      scaleX: 1.256718546954032,
-      scaleY: 1.6075454233616444,
-      width: 250,
+      rotation: 0,
+      scaleX: 1,
+      scaleY: 1,
+      width: 1024,
+      height: 1825,
       x: -23.179330196090106,
       y: -100.75893930126733,
     },
@@ -288,19 +289,6 @@ Konva.Image.fromURL(src, function (konvaImage) {
   setTimeout(function () {
     konvaImage.cropStart()
   })
-})
-
-Konva.Image.fromURL(src, function (konvaImage) {
-  konvaImage.setAttrs({
-    y: 50,
-    x: 350,
-    width: 300,
-    height: 250,
-    draggable: true,
-  })
-  konvaImage.enableCropOnDblClick()
-  layer.add(konvaImage)
-  layer.draw()
 })
 
 stage.on("click tap", function (e) {
@@ -317,5 +305,5 @@ stage.on("click tap", function (e) {
   transformer.attachTo(e.target)
   layer.draw()
 })
-stage.scaleX(2)
-stage.scaleY(2)
+stage.scaleX(.3)
+stage.scaleY(.3)
